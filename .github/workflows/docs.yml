@@ -44,8 +44,7 @@ jobs:
         run: pip install mkdocs mkdocs-material # Add any other plugins/themes you use
 
       - name: Deploy MkDocs to GitHub Pages
-        permissions:
-          pages: read write
+        pages: read write
         run: mkdocs gh-deploy --force
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
